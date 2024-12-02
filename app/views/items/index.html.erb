@@ -1,0 +1,16 @@
+<h1>Items</h1>
+<h2>Create Item:</h2>
+<div id="new_item_form">
+  <%= turbo_frame_tag :new_item do %>
+    <%= render 'form', item: @item %>
+  <% end %>
+</div>
+
+<h2>All Items</h2>
+<div id="items">
+  <%= turbo_frame_tag :items do %>
+    <%= render @items %>
+  <% end %>
+</div>
+
+

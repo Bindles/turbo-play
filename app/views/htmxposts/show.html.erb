@@ -1,0 +1,8 @@
+<h2>HtmxPost Details</h2>
+
+<div>
+  <strong>Title:</strong> <%= @htmxpost.title %><br>
+  <strong>Content:</strong> <%= @htmxpost.body %>
+</div>
+
+<%= link_to "Back", htmxposts_path, data: { hx_get: htmxposts_path, hx_target: "#posts", hx_swap: "innerHTML", hx_push: "true" } %>

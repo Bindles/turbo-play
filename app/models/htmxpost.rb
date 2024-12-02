@@ -1,0 +1,2 @@
+class Htmxpost < ApplicationRecord
+end

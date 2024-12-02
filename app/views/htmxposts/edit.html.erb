@@ -1,0 +1,12 @@
+from edit (not form)
+<%= form_with model: @htmxpost, data: { hx_patch: htmxpost_path(@htmxpost), hx_target: "##{dom_id(@htmxpost)}", hx_swap: "outerHTML" } do |form| %>
+  <div>
+    <%= form.text_field :title, value: @htmxpost.title %>
+  </div>
+  <div>
+    <%= form.text_area :content, value: @htmxpost.body %>
+  </div>
+  <div>
+    <%= form.submit "Save" %>
+  </div>
+<% end %>

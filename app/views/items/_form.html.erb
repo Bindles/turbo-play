@@ -1,0 +1,15 @@
+<%= form_with model: item, local: false do |f| %>
+  <% if item.errors.any? %>
+    <% item.errors.full_messages.each do |message|%>
+      <%= message %>
+    <% end %>
+  <% end %>
+
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :description %><br>
+  <%= f.text_field :description %><br>
+
+  <%= f.submit %>
+<% end %>

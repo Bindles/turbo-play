@@ -1,0 +1,15 @@
+<h2>New HtmxPost</h2>
+
+<%= form_with model: @htmxpost, data: { hx_post: htmxposts_path, hx_target: '#posts', hx_swap: 'beforeend' } do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
