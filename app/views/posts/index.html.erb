@@ -1,0 +1,21 @@
+<%# app/views/posts/index.html.erb %>
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Posts" %>
+
+<h1>Posts</h1>
+
+<%= params[:id].inspect %>
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p>
+      <%= link_to "Show this post", post_path(id: post.id) %>
+    </p>
+  <% end %>
+</div>
+
+<%= turbo_frame_tag :new_post, src:post_path(1) %>
+<%= link_to "New post", new_post_path %>
+
+

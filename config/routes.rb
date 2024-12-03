@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :books
+  resources :posts
   resources :htmxposts
   # get "items/index"
   # get "items/_form"
@@ -15,5 +17,5 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  root "items#index"
+  root "books#index"
 end

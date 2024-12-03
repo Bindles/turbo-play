@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+<%= turbo_frame_tag :show_book do %>
+
+<%= render @book %>
+
+<div>
+  <%= link_to "Edit this book", edit_book_path(@book) %> |
+  <%= link_to "Back to books", books_path %>
+
+  <%= button_to "Destroy this book", @book, method: :delete %>
+</div>
+
+<% end %>
