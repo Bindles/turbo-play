@@ -29,15 +29,4 @@
 
 <% end %>
 
-<script>
-  // Close the modal after successful submission
-  document.addEventListener("turbo:submit-end", (event) => {
-    if (event.target.closest("turbo-frame#new_post")) {
-      const modalElement = document.getElementById("newPostModal");
-      const modalInstance = bootstrap.Modal.getInstance(modalElement);
-      if (modalInstance) {
-        modalInstance.hide();
-      }
-    }
-  });
-</script>
+

@@ -7,3 +7,6 @@ application.debug = false
 window.Stimulus   = application
 
 export { application }
+
+// Import Bootstrap's JS
+import "bootstrap";
